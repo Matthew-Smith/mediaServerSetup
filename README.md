@@ -145,7 +145,7 @@ Set up Landing Page
 ------
 So that you don't have to bookmark every different application that we've installed I created a very basic landing page that has links to the different apps.
 
-![Landing Page layout](https://raw.githubusercontent.com/Matthew-Smith/mediaServerSetup/master/LandingPage.png "Landing Page")
+![Landing Page layout](https://raw.githubusercontent.com/Matthew-Smith/mediaServerSetup/master/LandingPage.PNG "Landing Page")
 
 ### Install a web server
 My web server of choice is apache but there are many options including [node http-server](https://www.npmjs.com/package/http-server) or [nginx](https://www.nginx.com/)
