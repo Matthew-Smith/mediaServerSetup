@@ -97,7 +97,7 @@ sudo touch /etc/systemd/system/sonarr.service
 ```
 
 Paste this init script into the file
-```
+```INI
 [Unit]
 Description=Sonarr Daemon
 After=network.target
