@@ -57,12 +57,12 @@ vim settings.json
 ```
 
 Then find these lines
-```shell
+```json
 "script-torrent-done-enabled": false,
 "script-torrent-done-filename": "",
 ```
 And change them to 
-```shell
+```json
 "script-torrent-done-enabled": true,
 "script-torrent-done-filename": "/home/<user name>/.config/transmission/unrarer.sh",
 ``` 
