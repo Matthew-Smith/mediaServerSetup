@@ -126,7 +126,6 @@ and start the service
 sudo service sonarr start
 ```
 
-
 Install Radarr
 ------
 Radarr is used for selecting and downloading movies as they become available. If you don't care to have an automated service for movies you can skip this
@@ -138,3 +137,24 @@ https://www.htpcguides.com/install-radarr-on-debian-8-jessie/
 Install Plex
 ------
 Plex is my media server of choice but other options include [DLNA](https://www.addictivetips.com/ubuntu-linux-tips/set-up-a-dlna-server-on-linux/), [Emby](https://emby.media/) and many others
+
+Set up Landing Page
+------
+So that you don't have to bookmark every different application that we've installed I created a very basic landing page that has links to the different apps.
+
+### Install a web server
+My web server of choice is apache but there are many options including [node http-server](https://www.npmjs.com/package/http-server) or [nginx](https://www.nginx.com/)
+
+Install Apache
+```
+sudo apt-get install apache2
+```
+
+Download the web server
+```
+cd /var/www/html
+wget https://github.com/Matthew-Smith/mediaServerLandingPage/archive/master.zip
+unzip master.zip
+```
+
+Now if you have not changed any of the application's default ports and you go to the ip address of your media server (or localhost on the media server) you will have a landing page which can re-direct you do the different applications
