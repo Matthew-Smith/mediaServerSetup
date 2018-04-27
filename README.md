@@ -136,7 +136,10 @@ https://www.htpcguides.com/install-radarr-on-debian-8-jessie/
 
 Install Plex
 ------
-Plex is my media server of choice but other options include [DLNA](https://www.addictivetips.com/ubuntu-linux-tips/set-up-a-dlna-server-on-linux/), [Emby](https://emby.media/) and many others
+Plex is my media server of choice but other options include [DLNA](https://www.addictivetips.com/ubuntu-linux-tips/set-up-a-dlna-server-on-linux/), [Emby](https://emby.media/) and many others.
+
+Here are the instructions I followed:
+https://www.htpcguides.com/install-plex-media-server-ubuntu-16-x-and-later/
 
 Set up Landing Page
 ------
