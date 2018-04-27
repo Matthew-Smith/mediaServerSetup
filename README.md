@@ -10,13 +10,13 @@ Install a VPN
 If you don't have access to a private torrent tracker, or you would like some extra layers of security a VPN is recommended. I personally use [Private Internet Acess](https://www.privateinternetaccess.com/) but there are many options out there.
 
 First lets install OpenVPN
-```
+```shell
 sudo apt-get update
 sudo apt-get install openvpn
 ```
 
 Now download the configurations for OpenVPN
-```
+```shell
 cd /etc/openvpn
 sudo wget https://www.privateinternetaccess.com/openvpn/openvpn.zip
 sudo unzip openvpn.zip
@@ -36,7 +36,7 @@ Transmission seems to be the easiest Torrent program to integrate with Sonnar/Ra
 ### Set download file locations
 TODO: Check what default state of these thigns are
 TODO: fill out descriptions of what is happening
-```
+```shell
 cd ~/.config/transmission
 sudo service transmission-daemon stop
 
@@ -44,32 +44,32 @@ sudo service transmission-daemon stop
 
 ### Set up unrar Script
 This script will run automatically after the torrent finishes downloading and will extract the movie/tv show automatically
-```
+```shell
 cd ~/.config/transmission
 wget https://gist.githubusercontent.com/fmoledina/3bf792adb5a671448682969307c5e515/raw/f4a67b0293aca678ba6844b7ea264d3d0ece46e6/unrarer.sh
 ```
 
 Now lets configure transmision's settings to execute the script when it is complete
-```
+```shell
 cd ~/.config/transmission
 sudo service transmission-daemon stop
 vim settings.json
 ```
 
 Then find these lines
-```
+```shell
 "script-torrent-done-enabled": false,
 "script-torrent-done-filename": "",
 ```
 And change them to 
-```
+```shell
 "script-torrent-done-enabled": true,
 "script-torrent-done-filename": "/home/<user name>/.config/transmission/unrarer.sh",
 ``` 
 Where `<user name>` is your user's name in linux
 
 Restart the transmission daemon
-```
+```shell
 sudo service transmission-daemon start
 ```
 
@@ -92,7 +92,7 @@ After you start Sonnar with the `mono --debug /opt/NzbDrone/NzbDrone.exe`
 
 ### Automatic Startup
 Create the Sonarr init.d script
-```
+```shell
 sudo touch /etc/systemd/system/sonarr.service
 ```
 
@@ -117,12 +117,12 @@ WantedBy=multi-user.target
 Be sure to change `<your user name>` and `<your user group>` 
 
 When that is done execute 
-```
+```shell
 sudo systemctl enable sonarr
 ```
 
 and start the service
-```
+```shell
 sudo service sonarr start
 ```
 
@@ -152,12 +152,12 @@ My web server of choice is apache but there are many options including [node htt
 
 
 Install Apache
-```
+```shell
 sudo apt-get install apache2
 ```
 
 Download the web server
-```
+```shell
 cd /var/www/html
 wget https://github.com/Matthew-Smith/mediaServerLandingPage/archive/master.zip
 unzip master.zip
