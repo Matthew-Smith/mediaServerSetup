@@ -34,7 +34,7 @@ TODO: set up OpenVPN as a service
 TODO: set up internet kill switch (turn off internet if vpn stops)
 
 
-Install Transmission
+Transmission
 ------
 Transmission seems to be the easiest Torrent program to integrate with Sonnar/Radarr and if you do need to look at your downloads it is easy to do from any other computer on the network.
 
@@ -82,6 +82,10 @@ Restart the transmission daemon
 ```shell
 sudo service transmission-daemon start
 ```
+
+##### Enable Peer Accept
+If 
+![Transmission Accept port closed](https://raw.githubusercontent.com/Matthew-Smith/mediaServerSetup/master/transmission_port.png "Transmission accept port closed")
 
 Jackett
 ------
